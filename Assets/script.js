@@ -20,3 +20,22 @@ function displayCities(cityArr) {
     }
   }
 }
+
+// storage function
+function storeCity(cityName) {
+    cityArr = localStorage.setItem("searchedCity", JSON.stringify(cityName));
+    
+    console.log(JSON.parse(localStorage.getItem("searchedCity")));
+  }
+
+  // searchBtn for cities
+  $("#searchBtn").on("click", function(event) {
+    event.preventDefault();
+    city = $("#searchTerm").val().trim();
+    cityArr.push(city);
+    displayCities(cityArr);
+    localStorage.setItem("searchedCity", JSON.stringify(cityArr));
+    $("searchTerm").val("");
+    fetchWeather(city);
+  
+  });

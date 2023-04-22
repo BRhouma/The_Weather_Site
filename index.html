@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Weather Site</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
-    <nav class="navbar sticky-top navbar-dark bg-transparent" style="background-image: linear-gradient(to right, rgb(253, 253, 253), navy);">
+    <nav class="navbar sticky-top navbar-dark bg-transparent"
+        style="background-image: linear-gradient(to right, rgb(253, 253, 253), navy);">
         <h1 style="width: auto; color: white;" class="mx-auto">Weather Dashboard</h1>
     </nav>
 
@@ -18,14 +22,30 @@
             <h2>Search for a City:</h2>
             <div class="input-group">
                 <div class="form-outline">
-                    <input type="text" id="searchTerm" class="form-control" placeholder="Search for a City"/>
+                    <input type="text" id="searchTerm" class="form-control" placeholder="Search for a City" />
                     <button class="btn btn-primary btn-block" id="searchBtn">
                         Search
                     </button>
-                </div>   
-              </div>
+                </div>
+            </div>
             <hr>
             <div id="previous-searches"></div>
         </aside>
+
+        <main class="col-10 display-blocks">
+
+            <div class="city-display">
+                <div class="city-display-content" id="city-stats-space"></div>
+                <div class="current-stats-content" id="current-stats-space"></div>
+
+            </div>
+
+            <div class="forecast-display">
+                <h3>Five Day Forecast</h3>
+                <div class="forecast-daily-boxes" id="forecast-boxes">
+                </div>
+            </div>
+        </main>
 </body>
+
 </html>
