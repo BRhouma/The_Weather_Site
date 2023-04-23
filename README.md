@@ -23,6 +23,6 @@ Third-party APIs allow developers to access their data and functionality by maki
 ![Alt text](/Assets/Images/WeatherSiteThumbnail.jpg)
 
 
-* [GitHub Repository]()
+* [GitHub Repository](https://github.com/BRhouma/The_Weather_Site)
 
-* [Deployed Application](https://github.com/BRhouma/The_Weather_Site)
+* [Deployed Application](https://brhouma.github.io/The_Weather_Site/)
