@@ -39,3 +39,33 @@ function storeCity(cityName) {
     fetchWeather(city);
   
   });
+
+  function fetchWeather(cityName) {
+
+  var requestUrl = 'http://api.openweathermap.org/geo/1.0/direct?' + 'q=' + cityName + '&appid=527dcf6e38939483d3ad43186117df6b'; 
+  
+    // fetch weather
+    fetch(requestUrl)
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(response) {
+          var cityLat = response[0].lat;
+          var cityLong = response[0].lon;
+          
+        var requestUrl1 = 'https://api.openweathermap.org/data/2.5/onecall?' + '&lat=' + cityLat + '&lon=' + cityLong + '&exclude=minutely,hourly,alerts' + '&units=imperial' + '&appid=527dcf6e38939483d3ad43186117df6b';  
+  
+  
+          return fetch(requestUrl1);
+        })
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(response) {
+            var weatherDataArr = (response.daily);
+            displayCurrentWeather(weatherDataArr);
+            displayForecastWeather(weatherDataArr);
+        });
+  }
+
+  
